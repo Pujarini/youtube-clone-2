@@ -13,7 +13,6 @@ const VideoList = () => {
     setVideos(data);
   };
 
-  console.log(videos);
   return (
     <div className="flex gap-5 flex-wrap w-full">
       {videos &&

@@ -4,8 +4,6 @@ import NestedComments from "./NestedComments";
 const VideoPanel = () => {
   const [data] = useSearchParams();
 
-  console.log(data.get("v"));
-
   const params = data.get("v");
   return (
     <div className="basis-3/4  m-2 p-5">

@@ -12,9 +12,9 @@ const VideoListPanel = () => {
     const data = await fetchVideos();
     setVideos(data);
   };
-  // console.log(videos);
+
   return (
-    <div className="basis-1/4  m-2 p-3 flex flex-col gap-5 overflow-y-auto">
+    <div className="flex flex-col gap-5 overflow-y-auto flex-1">
       {videos &&
         videos.map((video) => {
           return <VideoListComponent video={video} />;
