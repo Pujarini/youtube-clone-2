@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 
-const VideoCard = ({ video }) => {
-  const { title, channelTitle, thumbnails } = video?.snippet;
+const VideoListComponent = ({ video }) => {
+  const { title, thumbnails, channelTitle } = video?.snippet;
   const { viewCount } = video?.statistics;
   const { id } = video;
 
   return (
     <Link to={`/watch?v=${id}`}>
-      <div className="w-[320px] h-[350px]  flex flex-col rounded-lg">
+      <div className="flex border border-slate-200">
         <img
-          src={thumbnails?.maxres?.url}
+          src={thumbnails?.default?.url}
           alt="thumbnail"
-          className="w-[500px] rounded-lg"
+          className="object-fit"
         />
-        <div className="p-2">
-          <div className="font-bold">{title}</div>
+        <div className="flex flex-col p-2">
+          <div className="w-full">{title}</div>
           <div className="text-slate-400">{channelTitle}</div>
           <div className="text-slate-400">{viewCount} views</div>
         </div>
@@ -23,4 +23,4 @@ const VideoCard = ({ video }) => {
   );
 };
 
-export default VideoCard;
+export default VideoListComponent;

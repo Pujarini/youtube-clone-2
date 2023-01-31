@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { showPanel } from "../redux/panelSlice";
+import { togglePanel } from "../redux/panelSlice";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
@@ -12,8 +12,9 @@ const Header = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png"
           alt="menu-bar"
           className="h-[30px] cursor-pointer"
-          onClick={() => dispatch(showPanel())}
+          onClick={() => dispatch(togglePanel())}
         />
+
         <img
           src="https://w7.pngwing.com/pngs/674/324/png-transparent-youtube-logo-music-video-computer-icons-youtube-logo-text-trademark-logo.png"
           alt="youtube-logo"

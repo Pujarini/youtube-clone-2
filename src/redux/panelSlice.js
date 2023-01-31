@@ -6,12 +6,18 @@ const panelSlice = createSlice({
     visible: false,
   },
   reducers: {
-    showPanel: (state) => {
+    togglePanel: (state) => {
       state.visible = !state.visible;
+    },
+    hidePanel: (state) => {
+      state.visible = false;
+    },
+    showPanel: (state) => {
+      state.visible = true;
     },
   },
 });
 
-export const { showPanel } = panelSlice.actions;
+export const { togglePanel, hidePanel, showPanel } = panelSlice.actions;
 
 export default panelSlice.reducer;
